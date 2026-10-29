@@ -21,3 +21,7 @@
 @media(max-width:360px){.launch-screen{padding-left:20px;padding-right:20px}.welcome-title{font-size:39px}.welcome-art{height:150px}.welcome-art .constellation{width:190px;height:190px}.app-header-actions{gap:6px}.app-status{font-size:9px}.header-notifications,.header-settings{width:35px;height:35px}.brand b{font-size:23px}.notification-item{padding:17px 13px;gap:10px}.notification-copy b{font-size:12px}}
 @media(min-width:481px){.launch-screen{border-left:1px solid #151019;border-right:1px solid #151019}}
 .header-notifications.active{color:#b79aff;border-color:#8052ff}.notification-toast>div>span{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.toast-dismiss{width:44px;height:44px;margin-top:-8px;margin-right:-8px}.launch-screen:focus{outline:none}
+
+/* Keep app scrolling available without showing browser scrollbar chrome. */
+*{scrollbar-width:none;-ms-overflow-style:none}
+*::-webkit-scrollbar{display:none;width:0;height:0}
