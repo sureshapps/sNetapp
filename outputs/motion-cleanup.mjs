@@ -1,0 +1,1 @@
+import fs from 'node:fs';const p='src/motion.jsx';let s=fs.readFileSync(p,'utf8');s=s.replace('}, [root]);','}, [root, page]);');s=s.replace("const spin = gsap.to(state, {turn:Math.PI*2,", "const spin = gsap.fromTo(state, {turn:0}, {turn:Math.PI*2,");fs.writeFileSync(p,s);

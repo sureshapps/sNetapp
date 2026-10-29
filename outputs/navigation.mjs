@@ -1,0 +1,1 @@
+import fs from 'node:fs';const file='src/main.jsx';let s=fs.readFileSync(file,'utf8');s=s.replace("setPage(id);setValue(null)","setPage(id);requestAnimationFrame(()=>window.scrollTo({top:0,behavior:'instant'}));setValue(null)");fs.writeFileSync(file,s);

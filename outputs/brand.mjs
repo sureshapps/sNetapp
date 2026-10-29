@@ -1,0 +1,4 @@
+import fs from 'node:fs';
+const p='src/main.jsx';let s=fs.readFileSync(p,'utf8');s=s.replace('<div className="page-heading compact"><div className="eyebrow">YOUR CONNECTION OVER TIME</div><h1>Test history<span className="lime">.</span></h1><p>Measured here. Saved on this device.</p></div>','<div className="page-heading compact"><div><div className="eyebrow">YOUR CONNECTION OVER TIME</div><h1>Test history<span className="lime">.</span></h1><p>Measured here. Saved on this device.</p></div></div>');fs.writeFileSync(p,s);
+for(const path of ['index.html','public/manifest.webmanifest']){let text=fs.readFileSync(path,'utf8').replaceAll('#08090b','#000000');fs.writeFileSync(path,text)}
+const svg=fs.readFileSync('public/icon.svg','utf8').replaceAll('#08090b','#000000').replaceAll('#c7f989','#8052ff');fs.writeFileSync('public/icon.svg',svg);

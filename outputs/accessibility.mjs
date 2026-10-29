@@ -1,0 +1,1 @@
+import fs from 'node:fs';const file='src/main.jsx';let s=fs.readFileSync(file,'utf8');s=s.replace('<button key={s.id} onClick={e=>','<button key={s.id} aria-label={s.name} onClick={e=>');s=s.replace('<button key={m} disabled={busy}', '<button key={m} aria-label={m===\'alternate\'?\'Both directions\':m} disabled={busy}');fs.writeFileSync(file,s);
